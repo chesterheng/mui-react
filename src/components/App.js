@@ -1,8 +1,10 @@
 import React from 'react';
+import Header from './ui/Header'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
+      <Header />
       Hello!
     </div>
   );
