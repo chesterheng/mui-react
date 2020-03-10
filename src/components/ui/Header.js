@@ -16,7 +16,7 @@ const ElevationScroll = ({ children }) => {
 const Header = () => {
   return (
     <ElevationScroll>
-      <AppBar position="fixed">
+      <AppBar position="fixed" color="secondary">
         <Toolbar>Arc Development</Toolbar>
       </AppBar>
     </ElevationScroll>
