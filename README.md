@@ -7,4 +7,6 @@
 - [SVGOMG - SVGO's Missing GUI](https://jakearchibald.github.io/svgomg/)
 
 ### 15. Styling - Themes(Default Theme)
-- [Default Theme](https://material-ui.com/customization/default-theme/)
+- [Default Theme Object](https://material-ui.com/customization/default-theme/)
+- [Palette](https://material-ui.com/customization/palette/)
+- [Typography](https://material-ui.com/customization/typography/)

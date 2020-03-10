@@ -1,5 +1,10 @@
 import React, { cloneElement } from 'react'
-import { AppBar, Toolbar, useScrollTrigger } from '@material-ui/core'
+import { 
+  AppBar, 
+  Toolbar, 
+  useScrollTrigger, 
+  Typography 
+} from '@material-ui/core'
 
 const ElevationScroll = ({ children }) => {
 
@@ -16,8 +21,12 @@ const ElevationScroll = ({ children }) => {
 const Header = () => {
   return (
     <ElevationScroll>
-      <AppBar position="fixed" color="secondary">
-        <Toolbar>Arc Development</Toolbar>
+      <AppBar position="fixed" color="primary">
+        <Toolbar>
+          <Typography variant="h3">
+            Arc Development
+          </Typography>
+        </Toolbar>
       </AppBar>
     </ElevationScroll>
   )
