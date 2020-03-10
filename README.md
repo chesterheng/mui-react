@@ -5,4 +5,6 @@
 - [Flexible Icons with React and SVG](https://open.nytimes.com/flexible-icons-with-react-svg-973f310e6382)
 - [Smart JPEG and PNG compression](https://tinyjpg.com/)
 - [SVGOMG - SVGO's Missing GUI](https://jakearchibald.github.io/svgomg/)
-- 
+
+### 15. Styling - Themes(Default Theme)
+- [Default Theme](https://material-ui.com/customization/default-theme/)
