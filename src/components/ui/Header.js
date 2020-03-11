@@ -1,4 +1,4 @@
-import React, { cloneElement, Fragment } from 'react'
+import React, { cloneElement, Fragment, useState } from 'react'
 import { 
   AppBar,
   Button,
@@ -49,6 +49,10 @@ const useStyles = makeStyles(theme => ({
 
 const Header = () => {
   const classes = useStyles()
+  const [value, setValue] = useState(0)
+  const handleChange = (e, value) => {
+    setValue(value)
+  }
 
   return (
     <Fragment>
@@ -56,7 +60,12 @@ const Header = () => {
         <AppBar position="fixed" color="primary">
           <Toolbar disableGutters>
             <img src={logo} alt="company logo" className={classes.logo}/>
-            <Tabs className={classes.tabContainer}>
+            <Tabs 
+              value={value} 
+              onChange={handleChange} 
+              className={classes.tabContainer}
+              indicatorColor="primary"
+            >
               <Tab className={classes.tab} label="Home" />
               <Tab className={classes.tab} label="Services" />
               <Tab className={classes.tab} label="The Revolution" />
