@@ -1,4 +1,4 @@
-import React, { cloneElement, Fragment, useState } from 'react'
+import React, { cloneElement, Fragment, useState, useEffect } from 'react'
 import { 
   AppBar,
   Button,
@@ -29,7 +29,13 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "3em"
   },
   logo: {
-    height: "7em"
+    height: "8em"
+  },
+  logoContainer: {
+    padding: 0,
+    "&:hover": {
+      backgroundColor: "transparent"
+    }
   },
   tabContainer: {
     marginLeft: "auto"
@@ -51,16 +57,34 @@ const useStyles = makeStyles(theme => ({
 const Header = () => {
   const classes = useStyles()
   const [value, setValue] = useState(0)
+  
   const handleChange = (e, value) => {
     setValue(value)
   }
+  
+  useEffect(() => {
+    if(window.location.pathname === "/" && value !== 0) setValue(0)
+    else if(window.location.pathname === "/services" && value !== 1) setValue(1)
+    else if(window.location.pathname === "/revolution" && value !== 2) setValue(2)
+    else if(window.location.pathname === "/about" && value !== 3) setValue(3)
+    else if(window.location.pathname === "/contact" && value !== 4) setValue(4)
+    else if(window.location.pathname === "/estimate" && value !== 5) setValue(5)
+  }, [value])
 
   return (
     <Fragment>
       <ElevationScroll>
-        <AppBar position="fixed" color="primary">
+        <AppBar position="fixed">
           <Toolbar disableGutters>
-            <img src={logo} alt="company logo" className={classes.logo}/>
+            <Button 
+              component={Link} 
+              to="/" 
+              disableRipple
+              onClick={() => setValue(0)}
+              className={classes.logoContainer}
+            >
+              <img src={logo} alt="company logo" className={classes.logo} />
+            </Button>
             <Tabs 
               value={value} 
               onChange={handleChange} 
