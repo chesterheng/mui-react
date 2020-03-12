@@ -10,3 +10,15 @@
 - [Default Theme Object](https://material-ui.com/customization/default-theme/)
 - [Palette](https://material-ui.com/customization/palette/)
 - [Typography](https://material-ui.com/customization/typography/)
+
+### 36. Responsive Design Overview
+- Best Practices
+  - Relative Units
+  - Media Queries
+  - Grid System
+  - Testing
+
+- Goals
+  - Looks perfect on all screen sizes
+  - Orientation independent
+  - Resizable
